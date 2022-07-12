@@ -1,0 +1,32 @@
+.sidebar{
+  background: #d6e8f9;
+  transition: .5s;
+  position: fixed;
+  left: 0;
+  top: 64px;
+  z-index: 100;
+  transition: .5s;
+}
+
+.sidebar li:hover{
+  background: #1976d2;
+  color: white;
+  border-bottom: 1px solid red;
+}
+
+.sidebar a{
+  text-decoration: none;
+  color: blue;
+}
+
+.sidebar a li{
+  display: flex;
+  align-items: center;
+}
+
+
+.sidebar .active li{
+  background: #1976d2;
+  color: white;
+  border-bottom: 1px solid red;
+}

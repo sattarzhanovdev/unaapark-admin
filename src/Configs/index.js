@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://cars-c0e3b-default-rtdb.asia-southeast1.firebasedatabase.app'

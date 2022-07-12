@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios'
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import { BASE_URL } from './Configs'
+import CarsMore from './Pages/CarsMore'
+import './App.css'
+import Home from './Pages/Home'
+import Headers from './Components/Header'
+import CarsPage from './Pages/CarPage'
 
-function App() {
+axios.defaults.baseURL = BASE_URL
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <Headers />
       </header>
-    </div>
-  );
+
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/cars' element={<CarsPage />} />
+        <Route path='/carsmore/:id' element={<CarsMore />}/>
+      </Routes>
+    </>
+  )
 }
 
-export default App;
+export default App
