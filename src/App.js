@@ -7,6 +7,7 @@ import './App.css'
 import Home from './Pages/Home'
 import Headers from './Components/Header'
 import CarsPage from './Pages/CarPage'
+import AddCar from './Pages/AddCar'
 
 axios.defaults.baseURL = BASE_URL
 
@@ -21,6 +22,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/cars' element={<CarsPage />} />
+        <Route path='/addCar' element={<AddCar />} />
         <Route path='/carsmore/:id' element={<CarsMore />}/>
       </Routes>
     </>

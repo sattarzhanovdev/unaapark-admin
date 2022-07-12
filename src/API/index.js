@@ -2,6 +2,7 @@ import axios from 'axios'
 
 export const API = {
   get: () => axios.get('/cars.json'),
+  postCar: data => axios.post('/cars.json', data),
   getInfoAboutCar: id => axios.get(`/cars/${id}.json`),
   delete: id => axios.delete(`/cars/${id}.json`),
   getUsers: () => axios.get('/users.json'),
