@@ -6,7 +6,7 @@ import { API } from '../../API'
 import { useGetCars } from '../../Helpers'
 import './Card.scss'
 
-const CarCard = () => {
+const CarCardForEdit = () => {
   const { base } = useGetCars()
 
   const isBronedFunc = (id) => {
@@ -97,4 +97,4 @@ const CarCard = () => {
   )
 }
 
-export default CarCard
+export default CarCardForEdit

@@ -3,9 +3,21 @@ import { Box } from '@mui/material'
 import Headers from '../../Components/Header'
 import Statistics from '../../Components/Statistics'
 import AddOrderer from '../../Components/AddOrderer'
-import Calendars from '../../Components/Calendar'
-
+import { useNavigate } from 'react-router-dom'
+  
 const Home = () => {
+  const navigate = useNavigate()
+
+  React.useEffect(() => {
+    const auth = JSON.parse(localStorage.getItem('auth'))
+
+    if(auth){
+      navigate('/')
+    }else{
+      navigate('/auth/login')
+    }
+  }, [])
+
   return (
     <Box>
       

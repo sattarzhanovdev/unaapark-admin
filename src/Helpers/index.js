@@ -23,7 +23,7 @@ export const StatisticsBase = () => {
         setUsers(result.length)
       })
 
-    API.getOrders()
+    API.getSuccessOrders()
       .then(res => {
         const result = Object.entries(res.data)
           .map(([id, item]) => {

@@ -8,6 +8,10 @@ import Home from './Pages/Home'
 import Headers from './Components/Header'
 import CarsPage from './Pages/CarPage'
 import AddCar from './Pages/AddCar'
+import SuccessOrders from './Pages/SuccessOrders'
+import CancelledOrders from './Pages/CancelledOrders'
+import Auth from './Pages/Auth'
+import Edit from './Pages/Edit'
 
 axios.defaults.baseURL = BASE_URL
 
@@ -20,9 +24,14 @@ const App = () => {
       </header>
 
       <Routes>
+        <Route path='/auth/login' element={<Auth />} />
         <Route path='/' element={<Home />} />
+        <Route path='*' element={<Home />} />
         <Route path='/cars' element={<CarsPage />} />
+        <Route path='/successOrders' element={<SuccessOrders />} />
+        <Route path='/cancelledOrders' element={<CancelledOrders />} />
         <Route path='/addCar' element={<AddCar />} />
+        <Route path='/edit' element={<Edit />} />
         <Route path='/carsmore/:id' element={<CarsMore />}/>
       </Routes>
     </>

@@ -2,14 +2,19 @@ import React from 'react'
 import { Box, Button, Card } from '@mui/material'
 import { AddCarObject } from '../Utils'
 import './Btns.scss'
+import FirstPart from '../../Pages/AddCar/FirstPart'
+import SecondPart from '../../Pages/AddCar/SecondPart'
+import ThirdPart from '../../Pages/AddCar/ThirdPart'
 
 const AddCarNum = () => {
+
   const [ ID, setID ] = React.useState(1)
 
   return (
     <Box>
       <Box 
         display={'flex'}
+        marginBottom={'25px'}
       >
         {
           AddCarObject.map(({id, title}) => (
@@ -23,6 +28,7 @@ const AddCarNum = () => {
               style={{
                 cursor: 'pointer'
               }}
+
             >
               <Card
                 style={{
@@ -52,17 +58,9 @@ const AddCarNum = () => {
           ))
         }
       </Box>
-      {
-        AddCarObject.map(({id, element}) => (
-          <Box 
-            marginTop={'25px'}
-          >
-            {
-              id === ID ? element : ''  
-            }
-          </Box>
-        ))
-      }
+      <Box>
+        <FirstPart ID={ID} setID={setID}  />
+      </Box>
     </Box>
   )
 }
