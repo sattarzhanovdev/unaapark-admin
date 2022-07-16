@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiOutlineClose } from 'react-icons/ai'
 import { TiTick } from 'react-icons/ti'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { API } from '../../API'
 import { useGetCars } from '../../Helpers'
 import './Card.scss'
@@ -16,6 +16,8 @@ const CarCardForEdit = () => {
   function removeisBronedFunc(id) {
     API.brone(id, 'false')
   }
+
+  const navigate = useNavigate()
   
   return (
     <div className='card_container'>
@@ -79,13 +81,14 @@ const CarCardForEdit = () => {
               <button
                 className='card_footer_btn'
                 onClick={() => {
-                  API.delete(id)
+                  navigate('/editCar')
+                  localStorage.setItem('id', id)
                 }}
                 style={{
-                  background: 'red'
+                  background: '#F1C40F'
                 }}
               >
-                Удалить
+                Изменить
               </button>
             </div>
           </div>

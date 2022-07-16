@@ -29,11 +29,14 @@ const CancelledOrders = () => {
     }else{
       navigate('/auth/login')
     }
-  }, [database])
+  }, [])
 
   return (
     <Box
       padding={'100px'}
+      display={'flex'}
+      flexWrap={'wrap'}
+      gap={'15px'}
     >
       {
         database ? database.map(({id, car, name, number, timeFrom, timeTo}, i) => (
@@ -42,8 +45,8 @@ const CancelledOrders = () => {
             style={{
               width: '350px',
               height: '150px',
-              padding: '25px',
               display: 'flex',
+              padding: '25px',
               justifyContent: 'flex-start',
               flexDirection: 'column',
             }}

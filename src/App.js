@@ -12,6 +12,9 @@ import SuccessOrders from './Pages/SuccessOrders'
 import CancelledOrders from './Pages/CancelledOrders'
 import Auth from './Pages/Auth'
 import Edit from './Pages/Edit'
+import { Chat } from '@mui/icons-material'
+import EditCar from './Pages/EditCar'
+import JivoChat from './Components/Jivo Chat'
 
 axios.defaults.baseURL = BASE_URL
 
@@ -28,10 +31,12 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='*' element={<Home />} />
         <Route path='/cars' element={<CarsPage />} />
+        <Route path='/messages' element={<JivoChat />} />
         <Route path='/successOrders' element={<SuccessOrders />} />
         <Route path='/cancelledOrders' element={<CancelledOrders />} />
         <Route path='/addCar' element={<AddCar />} />
         <Route path='/edit' element={<Edit />} />
+        <Route path='/editCar' element={<EditCar />} />
         <Route path='/carsmore/:id' element={<CarsMore />}/>
       </Routes>
     </>

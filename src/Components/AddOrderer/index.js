@@ -97,6 +97,7 @@ const AddOrderer = () => {
                   display: 'flex',
                   justifyContent: 'flex-start',
                   flexDirection: 'column',
+                  overflowY: 'scroll'
                 }}
               >
                 <Typography variant='p'>

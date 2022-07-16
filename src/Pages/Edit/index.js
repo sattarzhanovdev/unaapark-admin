@@ -1,13 +1,13 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import CarCard from '../../Components/CarsCard'
+import CarCardForEdit from '../../Components/CarsCard for edit'
 
 const Edit = () => {
   return (
     <Box 
       padding={'100px'}
     >
-      <CarCard />
+      <CarCardForEdit />
     </Box>
   )
 }

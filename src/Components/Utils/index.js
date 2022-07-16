@@ -137,3 +137,10 @@ export const toplivoList = [
   {id: 3, title: 'Дизель'},
   {id: 4, title: 'Электро'},
 ]
+
+export const korobkaList = [
+  {id: 1, title: 'Автомат'},
+  {id: 2, title: 'Механика'},
+  {id: 3, title: 'Роботизированная'},
+  {id: 4, title: 'Вариативная'},
+]

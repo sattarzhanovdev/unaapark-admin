@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Button, FormControl, FormGroup, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material'
-import { chevroletsMarks, countries, hondasMarks, hyunadisMarks, korobkaList, kuzovList, mercedesesMarks, selectList, teslasMarks, toplivoList, toyotasMarks } from '../../../Components/Utils'
+import { chevroletsMarks, countries, hondasMarks, hyunadisMarks, kuzovList, mercedesesMarks, selectList, teslasMarks, toplivoList, toyotasMarks } from '../../../Components/Utils'
 import { AiOutlineRight } from 'react-icons/ai'
 import SecondPart from '../SecondPart'
 
@@ -278,27 +278,13 @@ const FirstPart = ({ID, setID}) => {
                   marginTop: '10px'
                 }}
               >
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  placeholder='Страна произодства машины'
+                <TextField
+                  placeholder='Коробка передачи'
                   style={{
                     width: '350px'
                   }}
-                  onChange={e => setCountry(e.target.value)}
-                >
-                  <MenuItem 
-                    selected 
-                    disabled
-                  >
-                    Коробка передачи машины
-                  </MenuItem>
-                  {
-                    korobkaList.map(({id, title}) => (
-                      <MenuItem key={id} value={title}>{title}</MenuItem>
-                    ))
-                  }
-                </Select>
+                  onChange={e => setTransmission(e.target.value)}
+                />
               </FormControl>  
             </Box>
             <Box

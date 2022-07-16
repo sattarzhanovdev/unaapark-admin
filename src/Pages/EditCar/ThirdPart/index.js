@@ -21,11 +21,9 @@ const ThirdPart = ({database, ID, setID}) => {
     isBroned: false
   }
 
-  const id = localStorage.getItem('id')
-
   const postData = () => {
     setID(ID += 1)
-    API.edit(id, data)
+    API.postCar(data)
   }
 
   return (
@@ -34,7 +32,6 @@ const ThirdPart = ({database, ID, setID}) => {
     >
       <Box
         display={'flex'}
-        flexWrap={'wrap'}
       >
         <Box
           display={'flex'}
