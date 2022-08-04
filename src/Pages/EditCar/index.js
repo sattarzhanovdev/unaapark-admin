@@ -10,7 +10,7 @@ const EditCar = () => {
   
   React.useEffect(() => {
     if(auth){
-      navigate('/addCar')
+      navigate('/edit')
     }else{
       navigate('/auth/login')
     }

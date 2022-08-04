@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Button, Card } from '@mui/material'
-import { AddCarObject } from '../Utils'
+import { AddCarObject, EditCarObject } from '../Utils'
 import './Btns.scss'
 import FirstPart from '../../Pages/AddCar/FirstPart'
 import SecondPart from '../../Pages/AddCar/SecondPart'
@@ -17,7 +17,7 @@ const EditCarNum = () => {
         marginBottom={'25px'}
       >
         {
-          AddCarObject.map(({id, title}) => (
+          EditCarObject.map(({id, title}) => (
             <Button
               className='box'
               key={id}

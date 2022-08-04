@@ -25,6 +25,12 @@ export const AddCarObject = [
   {id: 3, title: 'Добавление фотографии', element: <ThirdPart id={id} />},
 ]
 
+export const EditCarObject = [
+  {id: 1, title: 'Изменение товара', element: <FirstPart id={id} />},
+  {id: 2, title: 'Изменение цены', element: <SecondPart id={id} />},
+  {id: 3, title: 'Изменение фотографии', element: <ThirdPart id={id} />},
+]
+
 export const selectList = [
   {id: 1, title: 'Toyota', marks: {
     mark: 'Camry 70',

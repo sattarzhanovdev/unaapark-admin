@@ -4,6 +4,7 @@ import Headers from '../../Components/Header'
 import Statistics from '../../Components/Statistics'
 import AddOrderer from '../../Components/AddOrderer'
 import { useNavigate } from 'react-router-dom'
+import { API } from '../../API'
   
 const Home = () => {
   const navigate = useNavigate()

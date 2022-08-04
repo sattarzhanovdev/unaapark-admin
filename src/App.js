@@ -15,10 +15,11 @@ import Edit from './Pages/Edit'
 import { Chat } from '@mui/icons-material'
 import EditCar from './Pages/EditCar'
 import JivoChat from './Components/Jivo Chat'
+import { API } from './API'
 
 axios.defaults.baseURL = BASE_URL
 
-const App = () => {
+const App = () => { 
 
   return (
     <>
@@ -40,6 +41,7 @@ const App = () => {
         <Route path='/carsmore/:id' element={<CarsMore />}/>
       </Routes>
     </>
+
   )
 }
 

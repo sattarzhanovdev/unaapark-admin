@@ -19,7 +19,20 @@ export const API = {
   postSuccessOrder: data => axios.post('/successOrders.json', data),
   getCancelledOrders: () => axios.get(`/cancelledOrders.json`),
   postCancelledOrders: data => axios.post('/cancelledOrders.json', data),
-  getMessages: () => axios.get('/message.json'),
+  getMessages: () => fetch('https://node-sber1-az1-2.jivosite.com/agent/2018888/message_ack', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }),
   getMessageWithId: id => axios.get(`/message/${id}.json`),
-  postMessage: (id, message) => axios.post(`/message/${id}.json`, message)
+  postMessage: (id, message) => fetch('https://node-sber1-az1-2.jivosite.com/agent/2018888/message_ack', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: {
+      title: message
+    }
+  })
 }
