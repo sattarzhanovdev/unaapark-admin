@@ -25,7 +25,7 @@ const ThirdPart = ({database, ID, setID}) => {
 
   const postData = () => {
     setID(ID += 1)
-    API.edit(id, data)
+    API.postCar(data)
   }
 
   return (
